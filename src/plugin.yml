@@ -1,0 +1,9 @@
+name: MoGolems
+main: me.reinatix.MoGolemsV3.MoGolems
+version: 1.0
+author: Reinatix
+
+commands:
+  spawner:
+    description: MoGolems command
+    usage: /<command>
