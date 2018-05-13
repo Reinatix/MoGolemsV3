@@ -70,6 +70,16 @@ public class MoSpawnerManager {
     }
 
     /**
+     * Get a MoSpawner at a location.
+     *
+     * @param location the location to get
+     * @return null if MoSpawner does not exist
+     */
+    public static MoSpawner getMoSpawnerAt(Location location) {
+        return spawnerHashMap.getOrDefault(location, null);
+    }
+
+    /**
      * Save all MoSpawners to disk. Call the async method if this is happening outside server startup/shutdown.
      */
     public static void saveToDisk() {
