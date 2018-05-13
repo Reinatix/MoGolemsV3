@@ -1,4 +1,6 @@
 package me.reinatix.MoGolemsV3.events;
 
-public class EntitySpawn {
+import org.bukkit.event.Listener;
+
+public class EntitySpawn implements Listener {
 }

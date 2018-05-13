@@ -1,4 +1,6 @@
 package me.reinatix.MoGolemsV3.events;
 
-public class BlockPlace {
+import org.bukkit.event.Listener;
+
+public class BlockPlace implements Listener {
 }

@@ -1,4 +1,6 @@
 package me.reinatix.MoGolemsV3.events;
 
-public class EntityDeath {
+import org.bukkit.event.Listener;
+
+public class EntityDeath implements Listener {
 }

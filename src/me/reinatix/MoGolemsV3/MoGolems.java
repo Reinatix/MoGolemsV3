@@ -1,6 +1,11 @@
 package me.reinatix.MoGolemsV3;
 
 import me.reinatix.MoGolemsV3.commands.SpawnerCommand;
+import me.reinatix.MoGolemsV3.events.BlockBreak;
+import me.reinatix.MoGolemsV3.events.BlockPlace;
+import me.reinatix.MoGolemsV3.events.EntityDeath;
+import me.reinatix.MoGolemsV3.events.EntitySpawn;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MoGolems extends JavaPlugin {
@@ -24,7 +29,10 @@ public class MoGolems extends JavaPlugin {
     }
 
     private void registerEvents() {
-
+        Bukkit.getPluginManager().registerEvents(new BlockBreak(), this);
+        Bukkit.getPluginManager().registerEvents(new BlockPlace(), this);
+        Bukkit.getPluginManager().registerEvents(new EntityDeath(), this);
+        Bukkit.getPluginManager().registerEvents(new EntitySpawn(), this);
     }
 
     public static MoGolems getInstance() {
