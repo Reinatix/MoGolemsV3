@@ -1,6 +1,6 @@
 package me.reinatix.MoGolemsV3.utils;
 
-import me.reinatix.MoGolemsV3.Main;
+import me.reinatix.MoGolemsV3.MoGolems;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -22,7 +22,7 @@ public class Utils {
     }
 
     public void giveSpawner(Player player, String tier, int amount) {
-        FileConfiguration config = Main.instance.getConfig();
+        FileConfiguration config = MoGolems.getInstance().getConfig();
         ItemStack spawner = new ItemStack(Material.matchMaterial(config.getString("spawners." + tier + ".type")));
         ItemMeta meta = spawner.getItemMeta();
         meta.setDisplayName(config.getString("spawners." + tier + ".name"));
